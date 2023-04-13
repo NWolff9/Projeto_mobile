@@ -1,11 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,StatusBar } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import Servicos from './src/telas/Servicos';
 
 export default function App() {
   return (
+    
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <LinearGradient colors={['#ff7171', '#ff303c']} style={styles.background}/>
+
+      <StatusBar/>
+
+      <Servicos/>
+
     </View>
   );
 }
@@ -13,8 +19,15 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  background: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    height: '100%',
+    zIndex: -1,
   },
 });
