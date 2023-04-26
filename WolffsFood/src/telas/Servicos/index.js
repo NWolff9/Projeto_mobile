@@ -1,22 +1,30 @@
 import React from "react";
-import {SafeAreaView, Text, View} from "react-native";
+import {StatusBar, Text, FlatList} from "react-native";
+import Item from "./item";
 
 const restaurantes = [
     {
     id:1,
     nome:"Subway",
+    localizacao: "Av amoreiras"
     },
     {
         id:2,
-        nome:"McDonald"
+        nome:"McDonald",
+        localizacao: "Centro de Campinas"
     }
 ]
 
 export default function Servicos(){
     return(
-       <SafeAreaView>
+       <StatusBar>
             <Text>Testando a pagina de serviços</Text>
-       </SafeAreaView>
+
+            <FlatList
+                data={restaurantes}
+                renderItem={({item: {nome}}) => <Text> {nome}</Text> }
+                keyExtractor={(id) => String (id)} />
+       </StatusBar>
         
     )
 }
