@@ -1,31 +1,38 @@
 import React from "react";
-import {StatusBar, Text, FlatList} from "react-native";
+import {  Text, FlatList, View } from "react-native";
 import Item from "./item";
 
-const restaurantes = [
+const lanches = [
     {
-    id:1,
-    nome:"Subway",
-    localizacao: "Av amoreiras"
+        id: 1,
+        nome: "Carne Seca com Cream Cheese",
+        restaurante: "Subway",
+        preco: 29.90
     },
     {
-        id:2,
-        nome:"McDonald",
-        localizacao: "Centro de Campinas"
+        id: 2,
+        nome: "McLanche Feliz",
+        restaurante: "McDonald",
+        preco: 14.90
     }
 ]
 
-export default function Servicos(){
-    return(
-       <StatusBar>
-            <Text>Testando a pagina de serviços</Text>
+export default function Servicos() {
+    return (
 
-            <FlatList
-                data={restaurantes}
-                renderItem={({item: {nome}}) => <Text> {nome}</Text> }
-                keyExtractor={(id) => String (id)} />
-       </StatusBar>
-        
+            <View>
+              
+
+                <FlatList
+                    data={lanches}
+                    renderItem={({ item }) => <Item {...item} />}
+                    keyExtractor={({ id }) => String(id)} />
+                        
+
+            </View>
+
+
+
     )
 }
 

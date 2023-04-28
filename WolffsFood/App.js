@@ -2,6 +2,8 @@ import { StyleSheet, Text, View,StatusBar } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Servicos from './src/telas/Servicos';
 
+import 'react';
+
 export default function App() {
   return (
     
@@ -9,7 +11,7 @@ export default function App() {
       <LinearGradient colors={['#ff7171', '#ff303c']} style={styles.background}/>
 
       <StatusBar/>
-
+      
       <Servicos/>
 
     </View>
