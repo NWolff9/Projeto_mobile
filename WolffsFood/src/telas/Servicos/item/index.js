@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, TextInput } from 'react-native';
+import { Text, View, TextInput, Button } from 'react-native';
 import estilos from './estilos';
 
 export default function Item({ nome, restaurante, preco }) {
@@ -14,9 +14,10 @@ export default function Item({ nome, restaurante, preco }) {
             <View style={estilos.carrinho}>
                 <View>
                     <view style={estilos.valor}>
-                        <Text style={estilos.descricao}>Preço:</Text>
-                        <TextInput value = '0'/>
+                        <Text style={estilos.descricao}>Quantidade:</Text>
+                        <TextInput value='0' />
                     </view>
+                  
 
                     <view style={estilos.valor}>
                         <Text style={estilos.descricao}>Preço:</Text>
@@ -24,7 +25,13 @@ export default function Item({ nome, restaurante, preco }) {
                     </view>
 
                 </View>
+
+                <View>
+                    <Button title="Adcionar" />
+                </View>
+
             </View>
+            <View style={estilos.divisor} />
         </>
 
     )

@@ -12,4 +12,5 @@ export const cores = {
   escuro: '#555555',
   claro: '#fff',
   cinza: '#C7C7C7',
+  roza: '#DAD'
 };

@@ -24,7 +24,7 @@ export default StyleSheet.create({
   divisor: {
     marginHorizontal: 24,
     borderBottomWidth: 1,
-    borderBottomColor: cores.cinza,
+    borderBottomColor: cores.roza,
   },
   carrinho: {
     paddingHorizontal: 24,
