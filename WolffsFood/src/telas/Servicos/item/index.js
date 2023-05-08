@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text, View, TextInput, Button } from 'react-native';
+import { Text, View, Button } from 'react-native';
 import estilos from './estilos';
+import CampoInteiro from '../../../components/CampoInteiro';
 
 export default function Item({ nome, restaurante, preco }) {
     return (
@@ -15,7 +16,7 @@ export default function Item({ nome, restaurante, preco }) {
                 <View>
                     <view style={estilos.valor}>
                         <Text style={estilos.descricao}>Quantidade:</Text>
-                        <TextInput value='0' />
+                        <CampoInteiro valor='0'/>
                     </view>
                   
 
